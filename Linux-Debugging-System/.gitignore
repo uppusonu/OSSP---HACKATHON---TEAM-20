@@ -1,0 +1,4 @@
+build/
+reports/memory_report.txt
+reports/test_*.txt
+*.o

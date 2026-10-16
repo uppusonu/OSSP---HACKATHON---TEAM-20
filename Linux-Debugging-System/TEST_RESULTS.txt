@@ -1,0 +1,22 @@
+Final build and test results from package preparation
+make: exit 0
+make test: exit 0
+
+BUILD STDOUT:
+mkdir -p build reports
+gcc -Wall -Wextra -Wpedantic -std=c11 -g -Isrc src/main.c src/leak_tracker.c -o build/linux_debugging_system
+
+BUILD STDERR:
+
+TEST STDOUT:
+bash tests/run_tests.sh
+[PASS] intentional leak and report file
+[PASS] correct release
+[PASS] partial release
+[PASS] repeated release is a safe no-op without double-free
+[PASS] invalid command handling
+[PASS] report content checks
+
+All automated checks passed.
+
+TEST STDERR:
